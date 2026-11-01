@@ -66,7 +66,7 @@ Capturas reais não são publicadas aqui porque mostram arte protegida do jogo. 
 | **Áudio** | Vozes e músicas japonesas originais, sem alteração |
 | **Texto na tela** | Quebra pela largura real da fonte, novas caixas quando a fala não cabe, acentos também no Álbum e Histórico sem palavras cortadas |
 
-## 🕹️ Compatibilidade com PPSSPP
+## 🧩 Compatibilidade com PPSSPP
 
 | ambiente | situação |
 |---|---|
@@ -130,7 +130,7 @@ Não sabemos, porque isso ainda não foi testado.
 
 Mais perguntas no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#perguntas).
 
-## 🏷️ Créditos e avisos legais
+## 📜 Créditos e avisos legais
 
 Projeto independente de fãs, sem fins comerciais. Não tem vínculo com os titulares da obra nem foi autorizado por eles. *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI.
 
@@ -141,7 +141,7 @@ Créditos dos trabalhos de que o projeto depende e avisos legais completos em [d
 
 **Licenças:** código próprio em [MIT](LICENSE) e documentação própria em [CC BY 4.0](LICENSE-DOCS). O jogo, a tradução e `referencia/` **ficam fora** dessas licenças: veja [docs/LICENCAS.md](docs/LICENCAS.md).
 
-## 🛠️ Documentação técnica e ferramentas
+## 🔧 Documentação técnica e ferramentas
 
 Esta parte é para quem desenvolve. **Quem só quer jogar não precisa dela.**
 
