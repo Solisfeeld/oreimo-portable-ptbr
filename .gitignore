@@ -17,6 +17,7 @@
 
 # Imagens, fontes e pacotes: este repositório não traz nenhum
 *.png
+!site/assets/compartilhar.png
 *.jpg
 *.jpeg
 *.ttf
