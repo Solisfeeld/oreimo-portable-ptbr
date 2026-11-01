@@ -9,6 +9,7 @@
 * Compatibilidade e avisos sobre as imagens movidos do site e do README para [docs/COMPATIBILIDADE.md](docs/COMPATIBILIDADE.md) e [docs/CREDITOS_E_AVISOS.md](docs/CREDITOS_E_AVISOS.md).
 * Versão definitiva do Disco 1 aprovada, construída sobre a base japonesa.
 * Site e README simplificados para os jogadores; créditos e avisos detalhados concentrados em `docs/`.
+* Site com uma única área de download; saíram a seção sobre a tradução, a faixa de números e o estado dos discos.
 
 ## v0.1.0-disc1 (pré-versão)
 

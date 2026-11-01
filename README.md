@@ -11,25 +11,13 @@ Feita direto do japonês, com as vozes e músicas originais preservadas.
 
 ## 💿 Estado dos discos
 
-<img src="docs/imagens/estado-disco1.svg" alt="Disco 1: tradução concluída" width="460">
+**DISCO 1 — DISPONÍVEL**
 
-### DISCO 1 — DISPONÍVEL
-
-Tradução, testes técnicos e conferência manual concluídos no PPSSPP. **ISO disponível para download no Internet Archive.**
-
-<img src="docs/imagens/estado-disco2.svg" alt="Disco 2: indisponível, ainda não iniciado" width="460">
-
-### DISCO 2 — INDISPONÍVEL / AINDA NÃO INICIADO
-
-A tradução do segundo disco ainda não começou. Não há previsão.
+**DISCO 2 — INDISPONÍVEL**
 
 ## 📥 Download
 
 **[BAIXAR DISCO 1 — PT-BR](https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso)**
-
-Arquivo: `Oreimo_Disco1_PTBR.iso` · Tamanho: aproximadamente 1,5 GB · Hospedagem: Internet Archive.
-
-Plataforma: PSP · Emulador: PPSSPP · Textos: Português brasileiro · Áudio: Japonês.
 
 ## 🕹️ Como jogar
 
@@ -70,7 +58,7 @@ Plataforma: PSP · Emulador: PPSSPP · Textos: Português brasileiro · Áudio: 
 <details>
 <summary><strong>Já posso jogar em português?</strong></summary>
 <br>
-Sim. <a href="https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso">Baixe a ISO do Disco 1</a> e abra no PPSSPP.
+Sim. <a href="#-download">Baixe a ISO do Disco 1</a> e abra no PPSSPP.
 </details>
 
 <details>
