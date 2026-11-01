@@ -2,16 +2,16 @@
 
 ## Aviso legal
 
-Este é um projeto independente de fãs, sem fins comerciais. Não tem vínculo com os titulares da obra e não foi autorizado,
-patrocinado nem revisado por eles.
+Este é um projeto independente de fãs, sem fins comerciais. Não tem vínculo com os titulares da obra, nem é patrocinado ou
+revisado por eles.
 
 *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* foi publicado para PSP pela Bandai Namco Games em 2012.
 A série *Ore no Imouto ga Konna ni Kawaii Wake ga Nai* é de autoria de Tsukasa Fushimi. Conforme a tela de título do jogo:
 © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI. Todos os nomes, marcas, textos, imagens, músicas, vozes e vídeos pertencem
 aos seus respectivos titulares.
 
-Este repositório não contém nem distribui o jogo, executáveis, arquivos extraídos dos discos ou gravações, e não aponta para cópias não
-autorizadas. A capa e as capturas de tela do site e do README pertencem aos titulares do jogo. Se você é titular de direitos e tem alguma objeção, abra uma issue neste repositório.
+Os arquivos da ISO não estão no Git nem no GitHub Pages. O site e o README apontam para a ISO do Disco 1 hospedada externamente no Internet Archive.
+A capa e as capturas de tela do site e do README pertencem aos titulares do jogo. Se você é titular de direitos e tem alguma objeção, abra uma issue neste repositório.
 
 ## Licença
 

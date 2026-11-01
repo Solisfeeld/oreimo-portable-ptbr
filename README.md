@@ -13,9 +13,9 @@ Feita direto do japonês, com as vozes e músicas originais preservadas.
 
 <img src="docs/imagens/estado-disco1.svg" alt="Disco 1: tradução concluída" width="460">
 
-### DISCO 1 — TRADUÇÃO CONCLUÍDA
+### DISCO 1 — DISPONÍVEL
 
-Tradução, testes técnicos e conferência manual concluídos no PPSSPP. **O download público ainda não está disponível.**
+Tradução, testes técnicos e conferência manual concluídos no PPSSPP. **ISO disponível para download no Internet Archive.**
 
 <img src="docs/imagens/estado-disco2.svg" alt="Disco 2: indisponível, ainda não iniciado" width="460">
 
@@ -25,12 +25,15 @@ A tradução do segundo disco ainda não começou. Não há previsão.
 
 ## 📥 Download
 
-> [!IMPORTANT]
-> **Download do Disco 1 em preparação.** O arquivo aparecerá no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) assim que estiver disponível. Não há data.
+**[BAIXAR DISCO 1 — PT-BR](https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso)**
+
+Arquivo: `Oreimo_Disco1_PTBR.iso` · Tamanho: aproximadamente 1,5 GB · Hospedagem: Internet Archive.
+
+Plataforma: PSP · Emulador: PPSSPP · Textos: Português brasileiro · Áudio: Japonês.
 
 ## 🕹️ Como jogar
 
-1. Baixe o Disco 1.
+1. Baixe a ISO do Disco 1.
 2. Abra o PPSSPP.
 3. Selecione a ISO baixada e comece a jogar.
 
@@ -67,13 +70,13 @@ A tradução do segundo disco ainda não começou. Não há previsão.
 <details>
 <summary><strong>Já posso jogar em português?</strong></summary>
 <br>
-Ainda não. A tradução do Disco 1 está concluída, e o download será publicado no site.
+Sim. [Baixe a ISO do Disco 1](https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso) e abra no PPSSPP.
 </details>
 
 <details>
 <summary><strong>Tem data de lançamento?</strong></summary>
 <br>
-Não. Nem o download do Disco 1 nem o Disco 2 têm data prevista.
+O Disco 1 já está disponível. A tradução do Disco 2 ainda não foi iniciada e não tem previsão de lançamento.
 </details>
 
 <details>

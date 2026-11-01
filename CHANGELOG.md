@@ -2,6 +2,8 @@
 
 ## Não lançado
 
+* Download direto da ISO definitiva do Disco 1 pelo Internet Archive, nos botões do site e no README; Disco 2 continua indisponível.
+* Perguntas frequentes e documentação pública atualizadas para distinguir a ISO disponível de um patch independente, que não existe.
 * Site e README com a capa oficial do jogo, galeria de capturas reais e textos voltados aos jogadores.
 * Limitações conhecidas e detalhes técnicos movidos para `docs/`.
 * Compatibilidade e avisos sobre as imagens movidos do site e do README para [docs/COMPATIBILIDADE.md](docs/COMPATIBILIDADE.md) e [docs/CREDITOS_E_AVISOS.md](docs/CREDITOS_E_AVISOS.md).

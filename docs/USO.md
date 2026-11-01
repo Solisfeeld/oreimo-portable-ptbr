@@ -2,11 +2,15 @@
 
 ## Para jogar
 
-**Ainda não é possível jogar em português a partir deste repositório.** Não há ISO, patch, instalador nem aplicador automático, e os
-textos traduzidos não estão aqui. Esta página será atualizada se isso mudar. Qualquer forma futura de instalação vai exigir a sua
-própria cópia legalmente obtida do jogo.
+**O Disco 1 está disponível em português brasileiro, com a ISO hospedada no Internet Archive.**
 
-Não peça nem envie ISOs ou links para cópias do jogo nas issues deste repositório.
+1. [Baixe a ISO do Disco 1](https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso) (`Oreimo_Disco1_PTBR.iso`, aproximadamente 1,5 GB).
+2. Abra o PPSSPP.
+3. Selecione a ISO baixada e comece a jogar.
+
+Textos em português brasileiro e áudio original em japonês. O Disco 2 permanece indisponível, ainda não iniciado e sem previsão.
+
+A ISO não está no Git nem no GitHub Pages. Não há patch independente ou instalador de patch; nenhuma ferramenta abaixo é necessária para jogar.
 
 ## Para usar as ferramentas
 

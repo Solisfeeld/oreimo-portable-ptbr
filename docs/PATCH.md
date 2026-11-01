@@ -1,8 +1,14 @@
 # Distribuição do Disco 1: situação
 
-**Situação em 01/11/2026: download em preparação. Nenhum arquivo jogável foi publicado e não há data.**
+**Situação em 01/11/2026: a ISO definitiva do Disco 1 está disponível no Internet Archive. Não há patch independente nem instalador de patch.**
 
-A primeira análise mostrou que a versão traduzida dependia de arquivos do patch inglês. A versão definitiva do Disco 1, aprovada em 01/11/2026, parte da base japonesa e deixa de usar esses arquivos, com uma exceção decidida pelo projeto: a fonte. Essa versão ainda não foi publicada.
+**[BAIXAR DISCO 1 — PT-BR](https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso)**
+
+Arquivo: `Oreimo_Disco1_PTBR.iso` · 1.494.616.064 bytes · MD5 informado pelo Internet Archive: `53eab2987b900657fc51d702f92518aa`.
+
+SHA-256 da ISO definitiva local: `7cfecbde7222111d3941952b8f04116589e80741788184733507f563348e4d89`. O SHA-256 remoto não foi calculado.
+
+A primeira análise mostrou que a versão traduzida dependia de arquivos do patch inglês. A versão definitiva do Disco 1, aprovada em 01/11/2026 e agora hospedada externamente, parte da base japonesa e deixa de usar esses arquivos, com uma exceção decidida pelo projeto: a fonte.
 
 ## O que mudou na versão definitiva
 
@@ -18,7 +24,8 @@ Fora a fonte, nenhum arquivo da versão definitiva é idêntico a um arquivo exc
 
 ## O que ainda falta
 
-1. Definir o formato de distribuição e confirmar que ele respeita os direitos sobre o jogo e sobre a fonte.
-2. Testar em outros ambientes: Windows, Android e PSP real não foram testados.
+Não há patch independente para aplicar a outra cópia do jogo. Para jogar com a ISO disponível, veja [USO.md](USO.md).
+
+Windows, Android e PSP real ainda não foram testados. A hospedagem externa da ISO não altera o alcance das licenças do repositório, descrito em [LICENCAS.md](LICENCAS.md).
 
 Este documento é uma análise técnica, não um parecer jurídico.
