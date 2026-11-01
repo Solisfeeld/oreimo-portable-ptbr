@@ -48,13 +48,15 @@ BOX_BREAK = "¶"
 BRACKET_W = ADVANCE.get("「", 18)
 
 ISOS = {
-    "1": {"en": ROOT / "Ore no Imouto (English v1) Disc 1" / "Ore no Imouto (English v1) Disc 1.iso"},
+    "1": {"en": ROOT / "Ore no Imouto (English v1) Disc 1" / "Ore no Imouto (English v1) Disc 1.iso",
+          "jp": ROOT / "Ore no Imouto (Japan) Disc 1" / "Ore no Imouto (Japan) Disc 1.iso"},
     "2": {"en": ROOT / "Ore no Imouto (English v1) Disc 2" / "Ore no Imouto (English v1) Disc 2.iso"},
 }
 RES_PATH = "/PSP_GAME/INSDIR/RES.DAT"
 ENVPSP_PATH = "/PSP_GAME/USRDIR/envpsp.dat"
 FIRST_PATH = "/PSP_GAME/USRDIR/first.dat"
 VIDEOS_APROVADOS = ROOT / "build" / "video_aprovado"
+SEM_INGLES = False   # --base-jp: nada da ISO inglesa entra na imagem, nem como texto de reserva
 
 
 def width(s: str, speech: bool) -> int:
@@ -122,7 +124,7 @@ def build_scene(jp_obj: bytes, entries: list, names: dict, report: dict) -> byte
         spk_jp, _body = osc.split_speaker(b.text) if b.type == 100 else (None, b.text)
         if e.pt:
             body = e.pt
-        elif len(e.en) == 1 and e.en[0]:
+        elif len(e.en) == 1 and e.en[0] and not SEM_INGLES:
             report["fallback_en"] += 1
             b.text = e.en[0]
             continue
@@ -178,6 +180,8 @@ def main():
                     help="mantém os vídeos OIP_GEB01/02 da ISO EN (sem legenda PT)")
     ap.add_argument("--regerar-videos", action="store_true",
                     help="recodifica os vídeos em vez de usar build/video_aprovado/ (muda os bytes)")
+    ap.add_argument("--base-jp", action="store_true",
+                    help="constrói sobre a ISO japonesa, com EBOOT e fonte próprios, sem arquivos do patch inglês")
     ap.add_argument("--inspecao", metavar="CENA",
                     help="(SÓ TESTE) copia o OBJ de CENA para o lugar de AKYO_0000A: 'Initial start' "
                          "começa direto nessa cena (ISO de inspeção visual; nunca usar no patch)")
@@ -189,8 +193,14 @@ def main():
     t0 = time.time()
     ext = ROOT / "build" / "extraido"
     rd_jp = osc.ResDat.load(ext / f"disco{a.disco}_jp" / "RES.DAT")
-    rd_en = osc.ResDat.load(ext / f"disco{a.disco}_en" / "RES.DAT")
-    first_en = (ext / f"disco{a.disco}_en" / "first.dat").read_bytes()
+    if a.base_jp:
+        global SEM_INGLES
+        SEM_INGLES = True
+        rd_en = rd_jp
+        first_en = (ext / f"disco{a.disco}_jp" / "first.dat").read_bytes()
+    else:
+        rd_en = osc.ResDat.load(ext / f"disco{a.disco}_en" / "RES.DAT")
+        first_en = (ext / f"disco{a.disco}_en" / "first.dat").read_bytes()
     names = load_names()
     cdir = ROOT / "traducao" / f"disco{a.disco}" / "cenas"
     files = {p.stem: p for p in cdir.glob("*.txt")}
@@ -256,7 +266,8 @@ def main():
     if a.envpsp:
         env_bytes, env_rep = envpsp.construir(ext / f"disco{a.disco}_jp" / "envpsp.dat",
                                               ext / f"disco{a.disco}_en" / "envpsp.dat",
-                                              ROOT / "traducao" / f"disco{a.disco}" / "sistema" / "envpsp.tsv")
+                                              ROOT / "traducao" / f"disco{a.disco}" / "sistema" / "envpsp.tsv",
+                                              fallback_en=not a.base_jp)
         # sanidade: a releitura tem a mesma estrutura de tokens do JP
         _h, t_new = envpsp.tokenize(env_bytes)
         print(f"envpsp.dat: {len(env_bytes):,} bytes; strings PT={env_rep['pt']} EN={env_rep['en']} "
@@ -265,7 +276,7 @@ def main():
         replacements[ENVPSP_PATH] = env_bytes
     # EBOOT PT (tabela SJIS→Unicode com letras acentuadas para o Álbum; ver eboot_pt.py)
     import eboot_pt
-    eboot, eb_rep = eboot_pt.construir()
+    eboot, eb_rep = eboot_pt.construir(base_jp=a.base_jp)
     replacements["/PSP_GAME/SYSDIR/EBOOT.BIN"] = eboot
     print(f"EBOOT PT: {eb_rep}")
     if a.videos:
@@ -277,8 +288,13 @@ def main():
                 pv = video_pmf.gerar(v)
             replacements[f"/PSP_GAME/USRDIR/{v}.pmf"] = pv.read_bytes()
     if a.saida:
-        src = ISOS[a.disco]["en"]
+        src = ISOS[a.disco]["jp" if a.base_jp else "en"]
         rep = iso_grow.write_files_into_iso(str(src), replacements, a.saida)
+        if a.base_jp:
+            import iso_fonte
+            fonte = (ROOT / "build" / "fonte" / "FONTE.PGF").read_bytes()
+            print(f"fonte PT: {len(fonte):,} bytes no setor {iso_fonte.instalar(a.saida, fonte)}")
+            assert isofs.read_file(a.saida, iso_fonte.NOME) == fonte
         for path, data in replacements.items():
             assert isofs.read_file(a.saida, path) == data, path
         # releitura

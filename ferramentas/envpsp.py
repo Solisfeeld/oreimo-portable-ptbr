@@ -174,8 +174,7 @@ def construir(jp: Path, en: Path, tsv: Path, fallback_en=True):
     ou (fallback) a string EN quando o alinhamento é 1:1, ou fica em JP.
     -> (bytes, relatório)"""
     hj, tj = tokenize(jp.read_bytes())
-    _he, te = tokenize(en.read_bytes())
-    amap = align_strings(tj, te)
+    amap = align_strings(tj, tokenize(en.read_bytes())[1]) if fallback_en else {}
     pt = {}
     if tsv.exists():
         with open(tsv, encoding="utf-8") as f:

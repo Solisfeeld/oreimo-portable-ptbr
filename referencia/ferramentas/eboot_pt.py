@@ -13,6 +13,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "build" / "eboot" / "EBOOT_en_dec.elf"
+BASE_JP = ROOT / "build" / "eboot" / "EBOOT_jp_dec.elf"
+ELF = 0xC0                                       # offset no arquivo = vaddr + 0xC0
+BASE_RAM = 0x08804000
+LARGURA_AUTO = (0x367E0, 0x36808, 0x44C60, 0x44D4C, 0x4EF1C, 0x61EB8)   # `ori rX,zero,470`: largura da quebra automática do motor
+SCE_FONT_OPEN, SCE_FONT_OPEN_USER_FILE = 0xA834319D, 0x57FCB733
+NID_FONT_OPEN = 0x20ACEC                         # entrada de importação da chamada em 0xACCF4 (única)
+ARGUMENTO = 0xACCE0                              # lw a0,44(sp) / bne a0,zero / or a1,v0,zero: entre FindOptimumFont e sceFontOpen
+TEXTO_LIVRE = 0x216634                           # mensagem de erro de sceFontOpenUserMemory, que o jogo não usa
+FONTE_DISCO = b"disc0:/PSP_GAME/INSDIR/FONTE.PGF\0"
 TABELA = 0x23B870
 ACENTOS = "áàâãéêíóôõúüçÁÀÂÃÉÊÍÓÔÕÚÜÇ"
 # 25/10: os códigos 0xA1–0xA5 (｡｢｣､･) NÃO são livres — na Conversa a Dois o jogo converte o 「 da fala para ｢ (0xA2), e
@@ -22,10 +31,31 @@ CODIGOS = [c for c in range(0xB1, 0xDE) if c not in (0xBC, 0xC0, 0xC9, 0xCC, 0xC
 MAPA = dict(zip(ACENTOS, CODIGOS))                               # letra → byte cp932 remapeado
 
 
-def construir():
-    d = bytearray(BASE.read_bytes())
+def fonte_propria(d):
+    """Sobre o EBOOT japonês: sem quebra automática (o texto PT já traz as quebras) e sceFontOpen trocado por sceFontOpenUserFile,
+    com o caminho da fonte PT no 2º argumento. Os demais argumentos e o tratamento de erro são os do próprio jogo."""
+    for v in LARGURA_AUTO:
+        if struct.unpack_from("<H", d, v + ELF)[0] != 0x1D6:
+            raise ValueError(f"constante inesperada em {v:#x}")
+        struct.pack_into("<H", d, v + ELF, 0x500)
+    if struct.unpack_from("<I", d, NID_FONT_OPEN + ELF)[0] != SCE_FONT_OPEN:
+        raise ValueError("importação de sceFontOpen não encontrada")
+    struct.pack_into("<I", d, NID_FONT_OPEN + ELF, SCE_FONT_OPEN_USER_FILE)
+    if struct.unpack_from("<3I", d, ARGUMENTO + ELF) != (0x8FA4002C, 0x14800008, 0x00402825):
+        raise ValueError("ponto da chamada inesperado")
+    end = BASE_RAM + TEXTO_LIVRE
+    struct.pack_into("<3I", d, ARGUMENTO + ELF, 0x3C050000 | end >> 16, 0x34A50000 | end & 0xFFFF, 0)
+    if not bytes(d[TEXTO_LIVRE + ELF:TEXTO_LIVRE + ELF + 29]) == b"Error (sceFontOpenUserMemory)":
+        raise ValueError("texto inesperado")
+    d[TEXTO_LIVRE + ELF:TEXTO_LIVRE + ELF + len(FONTE_DISCO)] = FONTE_DISCO
+
+
+def construir(base_jp=False):
+    d = bytearray((BASE_JP if base_jp else BASE).read_bytes())
     if d[:4] != b"\x7fELF":
         raise ValueError("EBOOT base não é o ELF decifrado")
+    if base_jp:
+        fonte_propria(d)
     for c, b in MAPA.items():
         o = TABELA + 2 * b
         atual = struct.unpack_from("<H", d, o)[0]

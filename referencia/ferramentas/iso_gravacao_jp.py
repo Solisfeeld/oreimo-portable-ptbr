@@ -5,6 +5,7 @@
   # PT (inspeção com a pasta inteira da cena, p.ex. para ver os balões de réplica):
   python3 ferramentas/iso_gravacao_jp.py DSAO_0003T build/iso_teste/Oreimo_D1_inspecao_DSAO_0003T.iso --base build/saida_img
      (--base = dir com RES.DAT/first.dat/envpsp.dat gerados por construir.py --dir-saida; a ISO-base vira a EN)
+     --base-jp: com --base de construir.py --base-jp, usa a ISO japonesa, o EBOOT e a fonte próprios
 
 Copia a pasta INTEIRA da cena (OBJ, voicepack, cutin, tukkomi, fundos, personagens) para o
 lugar de script/AKYO_0000A no RES.DAT do Disco 1 JP — o .obj.gz recebe o nome que o jogo
@@ -80,15 +81,29 @@ def main():
     ap.add_argument("cena")
     ap.add_argument("saida")
     ap.add_argument("--base", help="dir com RES.DAT/first.dat[/envpsp.dat] (padrão: extraído do JP original)")
+    ap.add_argument("--base-jp", action="store_true")
+    ap.add_argument("--saltar-msg", type=int, help="(SÓ TESTE) o bloco 10 vira um salto para perto da fala com este msg_id")
     a = ap.parse_args()
     cena, saida = a.cena, a.saida
     base = Path(a.base) if a.base else ROOT / "build" / "extraido" / "disco1_jp"
-    iso_base = ROOT / "Ore no Imouto (English v1) Disc 1" / "Ore no Imouto (English v1) Disc 1.iso" if a.base else ISO_JP
+    iso_base = ROOT / "Ore no Imouto (English v1) Disc 1" / "Ore no Imouto (English v1) Disc 1.iso" if a.base and not a.base_jp else ISO_JP
     rd = osc.ResDat.load(base / "RES.DAT")
     first = (base / "first.dat").read_bytes()
     sb, se, fb, fe, oe = rd.scene_parts(cena)
     nome_obj = f"000script{ALVO}.obj.gz"
-    f000 = gpda.build_gpda([(nome_obj if x is oe else x.name, fb[x.data_offset:x.data_offset + x.data_size])
+    conteudo = {}
+    if a.saltar_msg:
+        import gzip
+        ob = rd.obj(cena)
+        blocos = osc.parse_obj(ob).blocks
+        alvo = next(i for i, b in enumerate(blocos) if b.msg_id == a.saltar_msg) - 2
+        velho = bytes.fromhex("100000002c01f4010000000000000000")          # 1º fade da cena, com o mesmo tamanho do salto
+        novo = struct.pack("<IHI", 16, 702, alvo).ljust(16, b"\0")
+        if ob.count(velho) < 1:
+            raise SystemExit("bloco de fade não encontrado")
+        conteudo[id(oe)] = gzip.compress(ob.replace(velho, novo, 1), 9, mtime=0)
+        print(f"salto para o bloco {alvo}")
+    f000 = gpda.build_gpda([(nome_obj if x is oe else x.name, conteudo.get(id(x), fb[x.data_offset:x.data_offset + x.data_size]))
                             for x in fe])
     nova = gpda.build_gpda([(x.name, f000 if x.name.strip() == "000" else sb[x.data_offset:x.data_offset + x.data_size])
                             for x in se])
@@ -98,7 +113,7 @@ def main():
     res = gpda.build_gpda([(e.name, script if e is rd.script_entry else rd.data[e.data_offset:e.data_offset + e.data_size])
                            for e in rd.top])
     chk = osc.ResDat(res)
-    assert chk.obj(ALVO) == rd.obj(cena)
+    assert a.saltar_msg or chk.obj(ALVO) == rd.obj(cena)
     txt = seekmap_por_caminho(res, seekmap.extract_text(first), {f"/{ALVO}/": f"/{cena}/", nome_obj: f"000script{cena}.obj.gz"})
     first_novo = seekmap.rebuild_first_dat(first, txt)
     arqs = {"/PSP_GAME/INSDIR/RES.DAT": res, "/PSP_GAME/USRDIR/first.dat": first_novo}
@@ -107,7 +122,13 @@ def main():
     if a.base:   # vídeos PT (construir.py os gera em build/video/), senão ficaria o PMF da ISO EN
         for v in sorted((ROOT / "build" / "video").glob("OIP_GEB0*.pmf")):
             arqs[f"/PSP_GAME/USRDIR/{v.name}"] = v.read_bytes()
+    if a.base_jp:
+        import eboot_pt
+        arqs["/PSP_GAME/SYSDIR/EBOOT.BIN"] = eboot_pt.construir(base_jp=True)[0]
     rep = iso_grow.write_files_into_iso(str(iso_base), arqs, saida)
+    if a.base_jp:
+        import iso_fonte
+        iso_fonte.instalar(saida, (ROOT / "build" / "fonte" / "FONTE.PGF").read_bytes())
     assert isofs.read_file(saida, "/PSP_GAME/INSDIR/RES.DAT") == res
     print(f"ISO de gravação/inspeção: {saida}  ({ALVO} <- {cena}; movidos={rep['moved']})")
 
