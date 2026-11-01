@@ -1,5 +1,10 @@
 # Histórico de versões
 
+## Não lançado
+
+* Site com galeria de capturas reais e textos mais diretos.
+* README com imagens do jogo e situação do download atualizada.
+
 ## v0.1.0-disc1 (pré-versão)
 
 Primeira versão pública do repositório.

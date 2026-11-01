@@ -11,16 +11,15 @@ Em `site/index.html`:
 3. Atualize o texto ao lado. Use só dados reais.
 4. Repita na seção `id="downloads"`, no cartão do disco, e nos selos da abertura.
 
-## Publicar um patch
+## Publicar um download
 
-Só depois de resolver [PATCH.md](PATCH.md) e publicar a Release com o arquivo:
+Só depois de resolver [PATCH.md](PATCH.md) e de o arquivo estar publicado:
 
-1. Na seção `id="downloads"`, troque `<p class="estado-botao">` por um link `<a class="botao botao-principal">` para o arquivo da Release.
+1. Na seção `id="downloads"`, troque `<p class="estado-botao">` por um link `<a class="botao botao-principal">` para o arquivo.
 2. Troque o aviso `aviso-principal`, os selos da abertura e a seção `id="instalacao"`.
 3. Atualize as perguntas frequentes e o `README.md`.
 
 ## Regras
 
 * Nada de download para arquivo que não existe.
-* Sem capturas nem artes oficiais sem avaliar os direitos.
-* Imagem ilustrativa sempre identificada como ilustração.
+* Capturas só da versão aprovada, sempre identificadas como capturas.

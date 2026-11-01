@@ -19,7 +19,7 @@ Feita direto do japonês, com as vozes e músicas originais preservadas.
 
 ### DISCO 1 — TRADUÇÃO CONCLUÍDA
 
-Tradução, testes técnicos e conferência manual concluídos no PPSSPP. A versão traduzida existe só localmente, no projeto: **ainda não há arquivo de instalação público.**
+Tradução, testes técnicos e conferência manual concluídos no PPSSPP. **O download público ainda não está disponível.**
 
 <img src="docs/imagens/estado-disco2.svg" alt="Disco 2: indisponível, ainda não iniciado" width="460">
 
@@ -30,29 +30,25 @@ A tradução do segundo disco ainda não começou. Não há previsão.
 ## 📥 Download e instalação
 
 > [!IMPORTANT]
-> **Patch público do Disco 1 em preparação.** Ainda não dá para jogar em português a partir deste repositório. Não há data.
+> **Download do Disco 1 em preparação.** A tradução está pronta, e o arquivo aparecerá no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) assim que estiver disponível. Não há data.
 
 | pergunta | resposta |
 |---|---|
-| **O que dá para baixar hoje?** | Só as ferramentas e a documentação. Elas são para quem programa, **não traduzem o jogo**. |
+| **O que dá para baixar hoje?** | Só as ferramentas e a documentação, para quem programa. Elas **não traduzem o jogo**. |
 | **Onde baixar?** | Na [versão v0.1.0-disc1](https://github.com/Solisfeeld/oreimo-portable-ptbr/releases/tag/v0.1.0-disc1). |
-| **O que será preciso para jogar?** | Sua própria cópia original do jogo, o patch do Disco 1 quando for publicado e o PPSSPP. |
-| **Como instalar?** | Ainda não há o que instalar. A meta é um processo guiado: selecionar a sua cópia do jogo e gerar a versão em português, sem programação. |
-| **Como jogar no PPSSPP?** | Quando o patch sair, é só abrir a ISO gerada no PPSSPP. |
+| **O que será preciso para jogar?** | O PPSSPP e os arquivos do Disco 1, quando forem publicados. |
+| **Como jogar no PPSSPP?** | Baixar, abrir o PPSSPP, selecionar o arquivo e jogar. |
 
-Quer entender a demora? [Veja por que um patch comum não pode ser publicado](docs/PATCH.md).
-
-**Este repositório nunca vai distribuir a ISO do jogo nem indicar onde obtê-la.** Não publique nem peça ISOs, arquivos extraídos ou links para cópias do jogo nas issues.
+Não publique nem peça ISOs, arquivos extraídos ou links para cópias do jogo nas issues.
 
 ## 🎮 Imagens da tradução
 
 <div align="center">
-<img src="docs/imagens/demonstracao.svg" alt="Ilustração de uma caixa de diálogo em português e um balão de réplica" width="560">
+<img src="site/assets/capturas/conversa-a-dois.jpg" alt="Conversa a Dois com Kirino e o balão de réplica É um mal-entendido" width="48%"> <img src="site/assets/capturas/titulo.jpg" alt="Tela de título em português" width="48%">
+<img src="site/assets/capturas/opcoes.jpg" alt="Tela de Opções traduzida" width="48%"> <img src="site/assets/capturas/extras.jpg" alt="Menu de Extras em português" width="48%">
 
-*Ilustração criada para o projeto, com frases próprias. **Não é captura do jogo.***
+*Capturas da tradução no PPSSPP. As imagens do jogo pertencem aos seus titulares.*
 </div>
-
-Capturas reais não são publicadas aqui porque mostram arte protegida do jogo. Por decisão do projeto, o repositório não traz imagens do jogo.
 
 ## ✨ Conteúdo traduzido
 
@@ -93,7 +89,7 @@ O objetivo é ser fiel ao original e natural em PT-BR, preservando o humor, o re
 
 Próximos passos, sem data prevista:
 
-1. Resolver o [patch público do Disco 1](docs/PATCH.md), sem incluir conteúdo protegido.
+1. Publicar o [download do Disco 1](docs/PATCH.md).
 2. Iniciar o Disco 2.
 
 ## ❓ Perguntas frequentes
@@ -101,25 +97,19 @@ Próximos passos, sem data prevista:
 <details>
 <summary><strong>Já posso jogar em português?</strong></summary>
 <br>
-Ainda não. A tradução do Disco 1 está concluída, mas o patch público está em preparação.
+Ainda não. A tradução do Disco 1 está concluída, e o download será publicado no site.
 </details>
 
 <details>
 <summary><strong>Tem data de lançamento?</strong></summary>
 <br>
-Não. Nem o patch do Disco 1 nem o Disco 2 têm data prevista.
+Não. Nem o download do Disco 1 nem o Disco 2 têm data prevista.
 </details>
 
 <details>
 <summary><strong>Preciso instalar Python para jogar?</strong></summary>
 <br>
-Não. Python só é necessário para as ferramentas de desenvolvimento. A meta do patch é um processo simples, sem programação.
-</details>
-
-<details>
-<summary><strong>Vocês enviam a ISO ou indicam onde baixar o jogo?</strong></summary>
-<br>
-Não. O projeto não distribui o jogo nem aponta para cópias dele. Use a sua própria cópia, obtida legalmente.
+Não. Python só é necessário para as ferramentas de desenvolvimento.
 </details>
 
 <details>
@@ -151,7 +141,7 @@ Esta parte é para quem desenvolve. **Quem só quer jogar não precisa dela.**
 | [docs/FERRAMENTAS.md](docs/FERRAMENTAS.md) | Descrição de cada script |
 | [docs/FORMATOS.md](docs/FORMATOS.md) | Formatos do jogo |
 | [docs/COMPATIBILIDADE.md](docs/COMPATIBILIDADE.md) | Ambientes e resultados dos testes |
-| [docs/PATCH.md](docs/PATCH.md) | Situação do patch público |
+| [docs/PATCH.md](docs/PATCH.md) | Situação da distribuição do Disco 1 |
 | [docs/LICENCAS.md](docs/LICENCAS.md) | Licenças, exceções e auditoria |
 | [docs/ATUALIZAR_SITE.md](docs/ATUALIZAR_SITE.md) | Como atualizar o site |
 | [CHANGELOG.md](CHANGELOG.md) | Histórico de versões |
@@ -163,7 +153,7 @@ Esta parte é para quem desenvolve. **Quem só quer jogar não precisa dela.**
 * **`site/`:** o código deste site.
 * **`referencia/`:** o código de trabalho do projeto, só para estudo. Não executa aqui.
 
-**O que não está disponível:** ISOs, patch, EBOOT, arquivos dos discos, músicas, vozes, vídeos, imagens do jogo, fontes, textos do jogo, a tradução, referências de terceiros e os módulos de terceiros usados no projeto.
+**O que não está disponível neste repositório:** ISOs, patch, EBOOT, arquivos dos discos, músicas, vozes, vídeos, fontes, textos do jogo, a tradução, referências de terceiros e os módulos de terceiros usados no projeto.
 
 **Requisitos:** Python 3.10 ou mais novo; Pillow para texturas; NumPy para comparar áudio; PPSSPP via flatpak para a automação.
 

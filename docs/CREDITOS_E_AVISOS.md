@@ -10,8 +10,8 @@ A série *Ore no Imouto ga Konna ni Kawaii Wake ga Nai* é de autoria de Tsukasa
 © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI. Todos os nomes, marcas, textos, imagens, músicas, vozes e vídeos pertencem
 aos seus respectivos titulares.
 
-Este repositório não contém nem distribui o jogo, partes dele, executáveis, arquivos extraídos dos discos, gravações ou capturas de
-tela, e não aponta para cópias não autorizadas. Se você é titular de direitos e tem alguma objeção, abra uma issue neste repositório.
+Este repositório não contém nem distribui o jogo, executáveis, arquivos extraídos dos discos ou gravações, e não aponta para cópias não
+autorizadas. As capturas de tela do site e do README pertencem aos titulares do jogo. Se você é titular de direitos e tem alguma objeção, abra uma issue neste repositório.
 
 ## Licença
 

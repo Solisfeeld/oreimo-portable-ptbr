@@ -1,34 +1,26 @@
-# Patch público do Disco 1: situação
+# Distribuição do Disco 1: situação
 
-**Situação em 31/10/2026: patch público em preparação. Nenhum patch foi publicado e não há data.**
+**Situação em 01/11/2026: download em preparação. Nenhum arquivo jogável foi publicado e não há data.**
 
-A ISO em português do projeto é local e não será distribuída. Antes de publicar um patch, foi medido o que ele carregaria de fato.
+A primeira análise mostrou que a versão traduzida dependia de arquivos do patch inglês. Essa dependência foi resolvida numa nova versão de teste, que ainda não foi aprovada nem publicada.
 
-## Por que um patch comum não serve
+## O que já foi resolvido na versão de teste
 
-Um arquivo de diferenças do tipo xdelta, da ISO japonesa para a ISO em português, teria **71,7 MB**. Esse volume não é só tradução:
+| item | antes | agora |
+|---|---|---|
+| Fonte | `font.pgf` comercial, vinda do patch inglês | Fonte gerada da Noto Sans JP (SIL OFL 1.1), com as mesmas larguras |
+| Executável | Baseado no do patch inglês | Baseado no japonês, com alterações próprias do projeto |
+| Imagens de instalação | Do patch inglês | As originais japonesas |
+| Dados de boca das vozes | 96 tabelas do patch inglês, sem dados de 33 falas | As tabelas originais japonesas, completas |
+| Textos do `envpsp.dat` | 596 textos vindos da base inglesa | 595 eram iguais ao japonês; 1 título foi romanizado pelo projeto |
 
-| conteúdo que entraria | situação |
-|---|---|
-| Executável do jogo (EBOOT, 3,5 MB) | O original é cifrado e o usado é decifrado, então a diferença traz o executável inteiro em claro. |
-| 2 vídeos recodificados (20,7 MB) | Com a recodificação, imagem e áudio dos vídeos entram quase inteiros. |
-| `font.pgf` (1,5 MB) | Fonte comercial FTT-NewRodin Pro DB, trazida pelo patch inglês, sem permissão conhecida de redistribuição. |
-| Material do patch inglês | EBOOT modificado, tabelas de voz de 96 cenas, imagens de instalação e 596 strings do `envpsp.dat`. Dizzy Ziddy / Rinjinbu não publicaram termos de redistribuição. |
-| 846 arquivos de imagem alterados, contando as cópias | São derivados da arte do jogo; um patch carregaria boa parte dessa arte. |
-| Textos traduzidos | Trabalho derivado do texto do jogo, sem autorização dos titulares. |
+Nenhum arquivo da versão de teste é idêntico a um arquivo exclusivo da versão inglesa. Scripts, imagens traduzidas, vídeos e textos de interface são os mesmos da versão aprovada.
 
-Um arquivo de diferenças não fica livre de conteúdo protegido só por não ser a ISO. Por isso, **nenhum pacote foi publicado**.
+## O que ainda falta
 
-## O que precisa ser resolvido
-
-1. Obter permissão dos autores do patch inglês ou deixar de depender desse material.
-2. Trocar `font.pgf` por uma fonte de licença livre, sem perder a largura do texto, e aprovar o resultado no jogo.
-3. Parar de levar o EBOOT inteiro: alterar o executável na máquina do usuário, ou usar outra forma de instalar a fonte e os acentos.
-4. Refazer as legendas dos 2 vídeos sem incluir os vídeos no patch.
-5. Levar para o patch só o necessário das imagens alteradas.
-6. Decidir, com consciência do risco, sobre a publicação da tradução, que continua sendo um trabalho derivado não autorizado.
-7. Criar o instalador simples, com conferência da ISO de origem por hash, e testar com arquivos válidos e inválidos.
-
-Cada item dessa lista muda o que foi testado. O resultado será uma nova versão de distribuição, que precisa de novos testes. A ISO aprovada do projeto não muda.
+1. Conferir e aprovar a nova versão, porque a fonte mudou.
+2. Definir o formato de distribuição e confirmar que ele respeita os direitos sobre o jogo.
+3. Incluir a licença SIL OFL 1.1 da fonte em qualquer pacote distribuído.
+4. Testar em outros ambientes: Windows, Android e PSP real não foram testados.
 
 Este documento é uma análise técnica, não um parecer jurídico.

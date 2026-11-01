@@ -7,6 +7,7 @@ Cada parte do repositório tem uma situação própria. **Os arquivos `LICENSE` 
 | Código próprio: `ferramentas/`, `testes/`, `.github/workflows/` e o código do site (`site/*.html`, `site/assets/site.css`, `site/assets/site.js`, `site/robots.txt`, `site/sitemap.xml`) | [MIT](../LICENSE) |
 | Documentação própria: `README.md`, `CHANGELOG.md`, `docs/`, `.github/notas/` e os textos do site | [CC BY 4.0](../LICENSE-DOCS) |
 | Arte original do site e do README: `site/assets/*.svg`, `site/assets/compartilhar.png`, `docs/imagens/` | [CC BY 4.0](../LICENSE-DOCS) |
+| Capturas do jogo: `site/assets/capturas/` | **Sem licença**: pertencem aos titulares do jogo |
 | `referencia/` | **Sem licença**: todos os direitos reservados, só para leitura |
 
 Atribuição para CC BY 4.0: "Oreimo Portable PT-BR, de Solisfeeld", com link para o repositório e para a licença.
