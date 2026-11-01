@@ -7,6 +7,8 @@
 **Tradução brasileira de fãs da visual novel de PSP _Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai_.**<br>
 Feita direto do japonês, com as vozes e músicas originais preservadas.
 
+🌐 **[Site oficial](https://solisfeeld.github.io/oreimo-portable-ptbr/)**
+
 </div>
 
 ## 💿 Estado dos discos
@@ -31,10 +33,6 @@ Feita direto do japonês, com as vozes e músicas originais preservadas.
 <img src="site/assets/capturas/conversa-a-dois.jpg" alt="Conversa a Dois com Kirino e o balão de réplica É um mal-entendido" width="48%"> <img src="site/assets/capturas/titulo.jpg" alt="Tela de título em português" width="48%">
 <img src="site/assets/capturas/opcoes.jpg" alt="Tela de Opções traduzida" width="48%"> <img src="site/assets/capturas/extras.jpg" alt="Menu de Extras em português" width="48%">
 </div>
-
-## 🌐 Site oficial
-
-**[solisfeeld.github.io/oreimo-portable-ptbr](https://solisfeeld.github.io/oreimo-portable-ptbr/)**
 
 ## ✨ Conteúdo traduzido
 
