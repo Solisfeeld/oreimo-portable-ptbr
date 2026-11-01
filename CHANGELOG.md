@@ -2,8 +2,8 @@
 
 ## Não lançado
 
-* Site com galeria de capturas reais e textos mais diretos.
-* README com imagens do jogo e situação do download atualizada.
+* Site e README com a capa oficial do jogo, galeria de capturas reais e textos voltados aos jogadores.
+* Limitações conhecidas e detalhes técnicos movidos para `docs/`.
 
 ## v0.1.0-disc1 (pré-versão)
 

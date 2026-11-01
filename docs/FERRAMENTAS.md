@@ -1,5 +1,9 @@
 # Ferramentas
 
+Este repositório traz ferramentas de leitura de ISO, GPDA e texturas GIM, leitura e remontagem de scripts, tokenizador do `envpsp.dat`, grafo de cenas, comparação de ISOs, desmontador MIPS e automação isolada do PPSSPP. Requisitos e comandos estão em [USO.md](USO.md).
+
+**Não fazem parte do repositório:** ISOs, patch, EBOOT, arquivos dos discos, músicas, vozes, vídeos, fontes, textos do jogo, a tradução, referências de terceiros e os módulos de terceiros usados no projeto.
+
 ## Funcionam com este repositório
 
 Testadas numa cópia limpa, sem nenhum outro arquivo do projeto. As implementações de ISO, GPDA e GIM foram escritas para este repositório, a

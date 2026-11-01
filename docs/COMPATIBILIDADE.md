@@ -38,3 +38,13 @@ A cena CKUR_0000A confirmou 23 de 33 caixas: o teste é linear e a cena tem um r
 Em cópia limpa, sem nenhum outro arquivo do projeto: 21/21 verificações sem o jogo; com a ISO japonesa, 300 cenas e o `envpsp.dat` remontados idênticos, `RES.DAT` e `first.dat`
 remontados byte a byte. As 13.649 texturas do JP decodificaram com sucesso; 13.647 iguais às de outro decodificador, e as 2 diferentes (P4) foram conferidas no PPSSPP, que mostra a
 leitura deste repositório como a correta.
+
+## Limitações conhecidas
+
+* **Falas dubladas divididas em 2 caixas (50 casos):** se você avançar para a segunda caixa antes de a voz acabar, a voz é cortada, porque o motor do jogo corta a voz em todo avanço. Basta esperar a voz terminar.
+* **Créditos finais em japonês:** mantidos assim por decisão do projeto.
+* **Ícones de palavra-chave:** parte da arte fica em japonês de propósito, como placas, logotipos e textos que fazem parte da ilustração.
+* **BOA♥ e RUIM!:** as imagens estão prontas e o motor aceita o formato usado, mas o uso real não foi reproduzido, pois depende de uma opção liberada com progresso.
+* **Aviso de autossalvamento:** traduzido, mas não apareceu nos testes.
+* **Minijogo e balões amarelos:** traduzidos, mas não foi localizado nenhum caminho que os mostre no Disco 1.
+

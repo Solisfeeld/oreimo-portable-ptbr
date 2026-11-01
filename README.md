@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/imagens/banner.svg" alt="Oreimo Portable PT-BR: tradução brasileira de fãs para PSP" width="100%">
+<img src="site/assets/capa-oficial.jpg" alt="Capa japonesa do jogo para PSP: Kirino e Kuroneko sobre fundo branco, com o título em letras laranja e o caractere 続 em verde" width="280">
 
 # Oreimo Portable PT-BR
 
@@ -9,7 +9,7 @@ Feita direto do japonês, com as vozes e músicas originais preservadas.
 
 ### [🌐 Abrir o site oficial do projeto](https://solisfeeld.github.io/oreimo-portable-ptbr/)
 
-[**Downloads**](#-download-e-instalação) · [**Instalação**](#-download-e-instalação) · [**Compatibilidade**](#-compatibilidade-com-ppsspp) · [**Perguntas**](#-perguntas-frequentes) · [**Documentação**](#-documentação-técnica-e-ferramentas)
+[**Downloads**](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) · [**Imagens**](#-imagens-da-tradução) · [**Compatibilidade**](#-compatibilidade-com-ppsspp) · [**Perguntas**](#-perguntas-frequentes)
 
 </div>
 
@@ -27,70 +27,42 @@ Tradução, testes técnicos e conferência manual concluídos no PPSSPP. **O do
 
 A tradução do segundo disco ainda não começou. Não há previsão.
 
-## 📥 Download e instalação
+## 📥 Download
 
 > [!IMPORTANT]
-> **Download do Disco 1 em preparação.** A tradução está pronta, e o arquivo aparecerá no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) assim que estiver disponível. Não há data.
+> **Download do Disco 1 em preparação.** O arquivo aparecerá no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) assim que estiver disponível. Não há data.
 
-| pergunta | resposta |
-|---|---|
-| **O que dá para baixar hoje?** | Só as ferramentas e a documentação, para quem programa. Elas **não traduzem o jogo**. |
-| **Onde baixar?** | Na [versão v0.1.0-disc1](https://github.com/Solisfeeld/oreimo-portable-ptbr/releases/tag/v0.1.0-disc1). |
-| **O que será preciso para jogar?** | O PPSSPP e os arquivos do Disco 1, quando forem publicados. |
-| **Como jogar no PPSSPP?** | Baixar, abrir o PPSSPP, selecionar o arquivo e jogar. |
-
-Não publique nem peça ISOs, arquivos extraídos ou links para cópias do jogo nas issues.
+**Para jogar, você vai precisar do PPSSPP.** Depois é só baixar o Disco 1, abrir o PPSSPP, selecionar o arquivo e jogar.
 
 ## 🎮 Imagens da tradução
 
 <div align="center">
 <img src="site/assets/capturas/conversa-a-dois.jpg" alt="Conversa a Dois com Kirino e o balão de réplica É um mal-entendido" width="48%"> <img src="site/assets/capturas/titulo.jpg" alt="Tela de título em português" width="48%">
 <img src="site/assets/capturas/opcoes.jpg" alt="Tela de Opções traduzida" width="48%"> <img src="site/assets/capturas/extras.jpg" alt="Menu de Extras em português" width="48%">
-
-*Capturas da tradução no PPSSPP. As imagens do jogo pertencem aos seus titulares.*
 </div>
 
 ## ✨ Conteúdo traduzido
 
 | | Disco 1 |
 |---|---|
-| **Diálogos** | 299 cenas e 18.852 unidades de texto traduzidas e revisadas, com todas as rotas e os extras |
-| **Falas recuperadas** | A estrutura segue o original japonês, o que recupera as cerca de 36 falas de uma cena cortadas no patch inglês |
-| **Interface** | Menus, Opções, Histórico, Lista O.R.E., Fluxograma, Álbum, títulos de cena e comentários do modo Barrage |
-| **Imagens com texto** | 362 recursos, incluindo os 242 balões de réplica da Conversa a Dois, cut-ins e ícones O.R.E., refeitos no estilo do original |
-| **Vídeos** | Legendas em português nos 2 vídeos que precisavam, com o áudio original preservado |
-| **Áudio** | Vozes e músicas japonesas originais, sem alteração |
-| **Texto na tela** | Quebra pela largura real da fonte, novas caixas quando a fala não cabe, acentos também no Álbum e Histórico sem palavras cortadas |
+| **Diálogos** | 299 cenas e 18.852 unidades de texto, com todas as rotas e os extras |
+| **Falas recuperadas** | A estrutura segue o original japonês, o que recupera as falas cortadas no patch inglês |
+| **Interface** | Menus, Opções, Histórico, Lista O.R.E., Fluxograma, Álbum e comentários do modo Barrage |
+| **Imagens com texto** | 362 recursos, incluindo os 242 balões de réplica da Conversa a Dois, refeitos no estilo do original |
+| **Vídeos** | Legendas em português nos 2 vídeos que precisavam |
+| **Áudio** | Vozes e músicas japonesas originais |
 
 ## 🧩 Compatibilidade com PPSSPP
 
 | ambiente | situação |
 |---|---|
-| PPSSPP 1.20.4, flatpak, Linux | testado por automação |
+| PPSSPP 1.20.4 no Linux | testado |
 | Outras versões do PPSSPP, Windows, macOS, Android | não testado |
 | PSP real | não testado |
 
-Os testes usaram a versão de trabalho do projeto, que não é distribuída. [Veja os resultados completos](docs/COMPATIBILIDADE.md).
-
-### Limitações conhecidas
-
-* **Falas dubladas divididas em 2 caixas (50 casos):** se você avançar para a segunda caixa antes de a voz acabar, a voz é cortada, porque o motor do jogo corta a voz em todo avanço. Basta esperar a voz terminar.
-* **Créditos finais em japonês:** mantidos assim por decisão do projeto.
-* **Ícones de palavra-chave:** parte da arte fica em japonês de propósito, como placas, logotipos e textos que fazem parte da ilustração.
-* **BOA♥ e RUIM!:** as imagens estão prontas e o motor aceita o formato usado, mas o uso real não foi reproduzido, pois depende de uma opção liberada com progresso.
-* **Aviso de autossalvamento:** traduzido, mas não apareceu nos testes.
-* **Minijogo e balões amarelos:** traduzidos, mas não localizamos nenhum caminho que os mostre no Disco 1.
-
 ## 📖 Sobre o projeto
 
-*Oreimo Portable* (俺の妹がこんなに可愛いわけがない ポータブルが続くわけがない) é uma visual novel para PSP lançada em 2 discos. Esta fan translation é um projeto independente, sem fins comerciais, que busca oferecer o jogo em português do Brasil com uma tradução nova **a partir do japonês**.
-
-O objetivo é ser fiel ao original e natural em PT-BR, preservando o humor, o registro e o jeito de falar de cada personagem. Inglês e outras traduções serviram apenas como referência de comparação.
-
-Próximos passos, sem data prevista:
-
-1. Publicar o [download do Disco 1](docs/PATCH.md).
-2. Iniciar o Disco 2.
+*Oreimo Portable* (俺の妹がこんなに可愛いわけがない ポータブルが続くわけがない) é uma visual novel para PSP lançada em 2012, em 2 discos. Esta fan translation é um projeto independente, sem fins comerciais, com uma tradução nova **a partir do japonês**: fiel ao original, natural em português e com o humor e o jeito de falar de cada personagem.
 
 ## ❓ Perguntas frequentes
 
@@ -107,12 +79,6 @@ Não. Nem o download do Disco 1 nem o Disco 2 têm data prevista.
 </details>
 
 <details>
-<summary><strong>Preciso instalar Python para jogar?</strong></summary>
-<br>
-Não. Python só é necessário para as ferramentas de desenvolvimento.
-</details>
-
-<details>
 <summary><strong>Funciona no celular ou num PSP de verdade?</strong></summary>
 <br>
 Não sabemos, porque isso ainda não foi testado.
@@ -122,44 +88,8 @@ Mais perguntas no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#perg
 
 ## 📜 Créditos e avisos legais
 
-Projeto independente de fãs, sem fins comerciais. Não tem vínculo com os titulares da obra nem foi autorizado por eles. *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI.
+Projeto independente de fãs, sem fins comerciais, sem vínculo com os titulares da obra. *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI. A capa e as capturas pertencem aos titulares do jogo.
 
-* **Solisfeeld:** direção do projeto, decisões de tradução e de arte, revisão e conferência no jogo.
-* **Claude Code (Anthropic), ferramenta de IA:** redação da tradução, das artes por script, do código, dos testes e da documentação, sob essa direção.
+**Solisfeeld:** direção do projeto, decisões de tradução e de arte, revisão e conferência no jogo.
 
-Créditos dos trabalhos de que o projeto depende e avisos legais completos em [docs/CREDITOS_E_AVISOS.md](docs/CREDITOS_E_AVISOS.md).
-
-**Licenças:** código próprio em [MIT](LICENSE) e documentação própria em [CC BY 4.0](LICENSE-DOCS). O jogo, a tradução e `referencia/` **ficam fora** dessas licenças: veja [docs/LICENCAS.md](docs/LICENCAS.md).
-
-## 🔧 Documentação técnica e ferramentas
-
-Esta parte é para quem desenvolve. **Quem só quer jogar não precisa dela.**
-
-| documento | conteúdo |
-|---|---|
-| [docs/USO.md](docs/USO.md) | Passo a passo das ferramentas |
-| [docs/FERRAMENTAS.md](docs/FERRAMENTAS.md) | Descrição de cada script |
-| [docs/FORMATOS.md](docs/FORMATOS.md) | Formatos do jogo |
-| [docs/COMPATIBILIDADE.md](docs/COMPATIBILIDADE.md) | Ambientes e resultados dos testes |
-| [docs/PATCH.md](docs/PATCH.md) | Situação da distribuição do Disco 1 |
-| [docs/LICENCAS.md](docs/LICENCAS.md) | Licenças, exceções e auditoria |
-| [docs/ATUALIZAR_SITE.md](docs/ATUALIZAR_SITE.md) | Como atualizar o site |
-| [CHANGELOG.md](CHANGELOG.md) | Histórico de versões |
-
-**O que está disponível:**
-
-* **Ferramentas que funcionam:** leitura de ISO, GPDA e texturas GIM, leitura e remontagem de scripts, tokenizador do `envpsp.dat`, grafo de cenas, comparação de ISOs, desmontador MIPS e automação isolada do PPSSPP.
-* **Testes:** um que roda sem o jogo e outro que usa a sua cópia.
-* **`site/`:** o código deste site.
-* **`referencia/`:** o código de trabalho do projeto, só para estudo. Não executa aqui.
-
-**O que não está disponível neste repositório:** ISOs, patch, EBOOT, arquivos dos discos, músicas, vozes, vídeos, fontes, textos do jogo, a tradução, referências de terceiros e os módulos de terceiros usados no projeto.
-
-**Requisitos:** Python 3.10 ou mais novo; Pillow para texturas; NumPy para comparar áudio; PPSSPP via flatpak para a automação.
-
-```bash
-python3 testes/teste_independente.py                       # não precisa do jogo
-python3 ferramentas/explorar.py info "/caminho/da/sua/copia.iso"
-```
-
-As ferramentas e qualquer uso futuro exigem a sua própria cópia legalmente obtida.
+[Créditos completos](docs/CREDITOS_E_AVISOS.md) · [Licenças](docs/LICENCAS.md) · [Histórico de versões](CHANGELOG.md) · [Documentação técnica](docs/FERRAMENTAS.md)
