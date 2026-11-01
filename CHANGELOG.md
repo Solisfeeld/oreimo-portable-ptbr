@@ -9,6 +9,9 @@ Primeira versão pública do repositório.
 * Automação isolada do PPSSPP com roteiro de exemplo.
 * Documentação dos formatos do jogo.
 * `referencia/`: código de trabalho, só para estudo.
+* Site do projeto em GitHub Pages.
+* Licenças: MIT para o código próprio e CC BY 4.0 para a documentação própria, com exceções em [docs/LICENCAS.md](docs/LICENCAS.md).
+* Análise do patch público em [docs/PATCH.md](docs/PATCH.md).
 * Disco 2 não iniciado.
 
 Esta versão não inclui ISO, patch, instalador nem os textos da tradução. Notas em
