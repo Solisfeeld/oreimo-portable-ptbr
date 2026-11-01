@@ -34,6 +34,6 @@ Em 31/10/2026, os 61 arquivos públicos foram comparados, linha a linha, com o p
 
 ## Dúvidas que continuam abertas
 
-1. **Autoria com IA.** Grande parte do código e da documentação foi redigida com o Claude Code, sob direção humana. A proteção autoral desse tipo de material pode ser limitada e varia por país. As licenças valem na medida dos direitos que existirem.
+1. **Alcance das licenças.** As licenças valem na medida dos direitos que existirem.
 2. **Conhecimento técnico de terceiros.** Os formatos foram entendidos também com a ajuda de ferramentas de terceiros, citadas em [CREDITOS_E_AVISOS.md](CREDITOS_E_AVISOS.md). Foram aproveitados fatos sobre os formatos, não código. A engenharia reversa pode ter regras próprias, conforme o país.
 3. **Este documento não é parecer jurídico.**

@@ -27,11 +27,6 @@ O código próprio usa MIT e a documentação própria usa CC BY 4.0, com exceç
 
 ## Créditos
 
-**Projeto**
-
-* Solisfeeld: direção do projeto, decisões de tradução e de arte, revisão e conferência no jogo.
-* Claude Code (Anthropic), ferramenta de IA: redação da tradução, das artes por script, do código, dos testes automáticos e da documentação, sob essa direção.
-
 **Trabalhos de que este projeto depende**
 
 * [Dizzy Ziddy / Rinjinbu Translations](https://dizzyziddy.xyz/2015/02/14/oreimo-tsuzuku-psp-disc-1-full-english-patch-release/):

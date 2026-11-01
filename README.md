@@ -7,10 +7,6 @@
 **Tradução brasileira de fãs da visual novel de PSP _Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai_.**<br>
 Feita direto do japonês, com as vozes e músicas originais preservadas.
 
-### [🌐 Abrir o site oficial do projeto](https://solisfeeld.github.io/oreimo-portable-ptbr/)
-
-[**Downloads**](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) · [**Imagens**](#-imagens-da-tradução) · [**Perguntas**](#-perguntas-frequentes)
-
 </div>
 
 ## 💿 Estado dos discos
@@ -32,7 +28,11 @@ A tradução do segundo disco ainda não começou. Não há previsão.
 > [!IMPORTANT]
 > **Download do Disco 1 em preparação.** O arquivo aparecerá no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) assim que estiver disponível. Não há data.
 
-**Para jogar, você vai precisar do PPSSPP.** Depois é só baixar o Disco 1, abrir o PPSSPP, selecionar o arquivo e jogar.
+## 🕹️ Como jogar
+
+1. Baixe o Disco 1.
+2. Abra o PPSSPP.
+3. Selecione a ISO baixada e comece a jogar.
 
 ## 🎮 Imagens da tradução
 
@@ -40,6 +40,10 @@ A tradução do segundo disco ainda não começou. Não há previsão.
 <img src="site/assets/capturas/conversa-a-dois.jpg" alt="Conversa a Dois com Kirino e o balão de réplica É um mal-entendido" width="48%"> <img src="site/assets/capturas/titulo.jpg" alt="Tela de título em português" width="48%">
 <img src="site/assets/capturas/opcoes.jpg" alt="Tela de Opções traduzida" width="48%"> <img src="site/assets/capturas/extras.jpg" alt="Menu de Extras em português" width="48%">
 </div>
+
+## 🌐 Site oficial
+
+**[solisfeeld.github.io/oreimo-portable-ptbr](https://solisfeeld.github.io/oreimo-portable-ptbr/)**
 
 ## ✨ Conteúdo traduzido
 
@@ -83,7 +87,5 @@ Mais perguntas no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#perg
 ## 📜 Créditos e avisos legais
 
 Projeto independente de fãs, sem fins comerciais, sem vínculo com os titulares da obra. *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI.
-
-**Solisfeeld:** direção do projeto, decisões de tradução e de arte, revisão e conferência no jogo.
 
 [Créditos completos](docs/CREDITOS_E_AVISOS.md) · [Licenças](docs/LICENCAS.md) · [Histórico de versões](CHANGELOG.md) · [Documentação técnica](docs/FERRAMENTAS.md)
