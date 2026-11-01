@@ -4,6 +4,8 @@
 
 * Site e README com a capa oficial do jogo, galeria de capturas reais e textos voltados aos jogadores.
 * Limitações conhecidas e detalhes técnicos movidos para `docs/`.
+* Compatibilidade e avisos sobre as imagens movidos do site e do README para [docs/COMPATIBILIDADE.md](docs/COMPATIBILIDADE.md) e [docs/CREDITOS_E_AVISOS.md](docs/CREDITOS_E_AVISOS.md).
+* Versão definitiva do Disco 1 aprovada, construída sobre a base japonesa. Ainda não publicada.
 
 ## v0.1.0-disc1 (pré-versão)
 

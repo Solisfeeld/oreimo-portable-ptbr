@@ -9,7 +9,7 @@ Feita direto do japonês, com as vozes e músicas originais preservadas.
 
 ### [🌐 Abrir o site oficial do projeto](https://solisfeeld.github.io/oreimo-portable-ptbr/)
 
-[**Downloads**](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) · [**Imagens**](#-imagens-da-tradução) · [**Compatibilidade**](#-compatibilidade-com-ppsspp) · [**Perguntas**](#-perguntas-frequentes)
+[**Downloads**](https://solisfeeld.github.io/oreimo-portable-ptbr/#downloads) · [**Imagens**](#-imagens-da-tradução) · [**Perguntas**](#-perguntas-frequentes)
 
 </div>
 
@@ -52,17 +52,11 @@ A tradução do segundo disco ainda não começou. Não há previsão.
 | **Vídeos** | Legendas em português nos 2 vídeos que precisavam |
 | **Áudio** | Vozes e músicas japonesas originais |
 
-## 🧩 Compatibilidade com PPSSPP
-
-| ambiente | situação |
-|---|---|
-| PPSSPP 1.20.4 no Linux | testado |
-| Outras versões do PPSSPP, Windows, macOS, Android | não testado |
-| PSP real | não testado |
-
 ## 📖 Sobre o projeto
 
 *Oreimo Portable* (俺の妹がこんなに可愛いわけがない ポータブルが続くわけがない) é uma visual novel para PSP lançada em 2012, em 2 discos. Esta fan translation é um projeto independente, sem fins comerciais, com uma tradução nova **a partir do japonês**: fiel ao original, natural em português e com o humor e o jeito de falar de cada personagem.
+
+**Plataforma:** PSP · **Emulador:** PPSSPP
 
 ## ❓ Perguntas frequentes
 
@@ -88,7 +82,7 @@ Mais perguntas no [site](https://solisfeeld.github.io/oreimo-portable-ptbr/#perg
 
 ## 📜 Créditos e avisos legais
 
-Projeto independente de fãs, sem fins comerciais, sem vínculo com os titulares da obra. *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI. A capa e as capturas pertencem aos titulares do jogo.
+Projeto independente de fãs, sem fins comerciais, sem vínculo com os titulares da obra. *Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai* © Tsukasa Fushimi / ASCII Media Works / OIP, ©2012 NBGI.
 
 **Solisfeeld:** direção do projeto, decisões de tradução e de arte, revisão e conferência no jogo.
 
