@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Integridade de uma ISO PT construída por construir.py.
 
-  python3 testes/verificar_iso_final.py entrega/Oreimo_Disco1_PTBR.iso [--dir-saida build/saida] [--base-jp]
+  python3 testes/verificar_iso_final.py entrega/Oreimo_Disco1_PTBR.iso [--dir-saida build/saida] [--base-jp [--fonte x.pgf]]
 
---base-jp: ISO construída sobre a japonesa (construir.py --base-jp), com EBOOT e fonte próprios.
+--base-jp: ISO construída sobre a japonesa (construir.py --base-jp), com EBOOT próprio; a fonte padrão é a da ISO aprovada.
 
 Confere: (1) RES.DAT, first.dat, envpsp.dat e os PMF PT == arquivos gerados no build; (2) todos os outros
 arquivos idênticos byte a byte à ISO EN de base; (3) RES.DAT relido: todas as cenas com OBJ válido e o seekmap
@@ -61,7 +61,8 @@ def main():
             if c.upper() in {k.upper() for k in list(TROCADOS) + list(VIDEOS) + [EBOOT]}:
                 continue
             if c.upper().endswith("DUMMY.DAT") and base_jp:
-                check(isofs.read_file(iso, c.replace("DUMMY.DAT", "FONTE.PGF")) == (ROOT / "build" / "fonte" / "FONTE.PGF").read_bytes(),
+                fonte = sys.argv[sys.argv.index("--fonte") + 1] if "--fonte" in sys.argv else ROOT / "build" / "fonte" / "fonte_aprovada.pgf"
+                check(isofs.read_file(iso, c.replace("DUMMY.DAT", "FONTE.PGF")) == Path(fonte).read_bytes(),
                       "FONTE.PGF == fonte gerada")
                 continue
             if c.upper().endswith("DUMMY.DAT"):

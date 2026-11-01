@@ -182,6 +182,8 @@ def main():
                     help="recodifica os vídeos em vez de usar build/video_aprovado/ (muda os bytes)")
     ap.add_argument("--base-jp", action="store_true",
                     help="constrói sobre a ISO japonesa, com EBOOT e fonte próprios, sem arquivos do patch inglês")
+    ap.add_argument("--fonte", default=str(ROOT / "build" / "fonte" / "fonte_aprovada.pgf"),
+                    help="com --base-jp: fonte gravada na ISO (padrão: a da ISO aprovada)")
     ap.add_argument("--inspecao", metavar="CENA",
                     help="(SÓ TESTE) copia o OBJ de CENA para o lugar de AKYO_0000A: 'Initial start' "
                          "começa direto nessa cena (ISO de inspeção visual; nunca usar no patch)")
@@ -292,7 +294,7 @@ def main():
         rep = iso_grow.write_files_into_iso(str(src), replacements, a.saida)
         if a.base_jp:
             import iso_fonte
-            fonte = (ROOT / "build" / "fonte" / "FONTE.PGF").read_bytes()
+            fonte = Path(a.fonte).read_bytes()
             print(f"fonte PT: {len(fonte):,} bytes no setor {iso_fonte.instalar(a.saida, fonte)}")
             assert isofs.read_file(a.saida, iso_fonte.NOME) == fonte
         for path, data in replacements.items():

@@ -128,7 +128,7 @@ def main():
     rep = iso_grow.write_files_into_iso(str(iso_base), arqs, saida)
     if a.base_jp:
         import iso_fonte
-        iso_fonte.instalar(saida, (ROOT / "build" / "fonte" / "FONTE.PGF").read_bytes())
+        iso_fonte.instalar(saida, (ROOT / "build" / "fonte" / "fonte_aprovada.pgf").read_bytes())
     assert isofs.read_file(saida, "/PSP_GAME/INSDIR/RES.DAT") == res
     print(f"ISO de gravação/inspeção: {saida}  ({ALVO} <- {cena}; movidos={rep['moved']})")
 
