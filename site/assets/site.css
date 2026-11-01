@@ -168,11 +168,6 @@ p { margin: 0 0 1em; }
 .passos p { margin: 0; color: var(--texto-suave); }
 
 /* Tabela */
-.tabela-rolagem { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; }
-th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--tinta-3); }
-th { font-size: .9rem; text-transform: uppercase; letter-spacing: .05em; color: #d8cbdf; }
-td .selo { font-size: .8rem; padding: 4px 10px; white-space: nowrap; }
 
 /* Perguntas */
 .perguntas { display: grid; gap: 12px; max-width: 52em; }
