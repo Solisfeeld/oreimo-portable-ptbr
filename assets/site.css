@@ -127,7 +127,7 @@ p { margin: 0 0 1em; }
 /* Downloads */
 .downloads { background: linear-gradient(135deg, #2a0f2e, var(--tinta) 60%); }
 .pacotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.pacote { display: flex; flex-direction: column; align-items: center; min-width: 0; gap: 14px; background: var(--tinta-3); border-radius: var(--raio); padding: 26px 24px; text-align: center; }
+.pacote { display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 0; gap: 14px; background: var(--tinta-3); border-radius: var(--raio); padding: 26px 24px; text-align: center; }
 .pacotes-dois { grid-template-columns: repeat(2, 1fr); }
 .pacote-ativo { background: #fff; color: var(--texto); box-shadow: 0 0 0 4px var(--lima); }
 .pacote-ativo p { color: var(--texto-suave); }
