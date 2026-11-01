@@ -140,6 +140,9 @@ def conferir_cena(pt_obj, ref_obj):
     return erros, len(kp) - len(kr), len(voz(ref))
 
 
+AJUSTES_POSTERIORES = {"/script/AKYO_0010A/000/000scriptAKYO_0010A.obj.gz"}   # @173: quebra de linha pedida pelo autor em 01/11/2026
+
+
 def main():
     iso = sys.argv[1]
     ok, falhas = 0, []
@@ -157,7 +160,8 @@ def main():
     pt, jp, en = folhas(res_pt), folhas(res_jp), folhas(res_en)
 
     # ---- gráficos
-    check(set(pt) == set(en), "G1 mesma árvore de arquivos internos da ISO base", f"{len(pt)} arquivos internos")
+    base_jp = "--base-jp" in sys.argv                  # ISO sobre a base japonesa: a referência da árvore é o JP, e a voicepack e o EBOOT mudam de propósito
+    check(set(pt) == set(jp if base_jp else en), "G1 mesma árvore de arquivos internos da ISO base", f"{len(pt)} arquivos internos")
     n_gim, ruins, dif_dim, sem_jp = 0, [], [], 0
     formatos = Counter()
     for c, b in pt.items():
@@ -237,6 +241,8 @@ def main():
         arq = Path(sys.argv[sys.argv.index("--manifesto") + 1]) if "--manifesto" in sys.argv else MANIFESTO
         esperado = dict(ln.split("\t") for ln in arq.read_text(encoding="utf-8").splitlines()[1:])
         dif = [c for c in set(esperado) | set(linhas) if esperado.get(c) != linhas.get(c)]
+        if base_jp:                                    # tudo o que continua aprovado tem de bater; estes vêm da base japonesa
+            dif = [c for c in dif if not (c.endswith(("voicepack.gz", "EBOOT.BIN")) or "TKD0080E" in c or c in AJUSTES_POSTERIORES)]
         check(not dif, "M1 recursos aprovados idênticos ao manifesto", f"{len(esperado)} arquivos; {sorted(dif)[:3]}")
     print(f"\nRESUMO: {ok}/{ok + len(falhas)} verificações OK" + ("" if not falhas else f" — FALHAS: {falhas[:10]}"))
     return 1 if falhas else 0

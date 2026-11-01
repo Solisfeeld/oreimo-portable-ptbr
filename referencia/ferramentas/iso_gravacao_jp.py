@@ -83,6 +83,7 @@ def main():
     ap.add_argument("--base", help="dir com RES.DAT/first.dat[/envpsp.dat] (padrão: extraído do JP original)")
     ap.add_argument("--base-jp", action="store_true")
     ap.add_argument("--saltar-msg", type=int, help="(SÓ TESTE) o bloco 10 vira um salto para perto da fala com este msg_id")
+    ap.add_argument("--saltar-bloco", type=int, help="(SÓ TESTE) o bloco 14 vira um salto para este bloco, depois do fade de abertura e do primeiro sprite")
     a = ap.parse_args()
     cena, saida = a.cena, a.saida
     base = Path(a.base) if a.base else ROOT / "build" / "extraido" / "disco1_jp"
@@ -92,12 +93,14 @@ def main():
     sb, se, fb, fe, oe = rd.scene_parts(cena)
     nome_obj = f"000script{ALVO}.obj.gz"
     conteudo = {}
-    if a.saltar_msg:
+    if a.saltar_msg or a.saltar_bloco:
         import gzip
         ob = rd.obj(cena)
         blocos = osc.parse_obj(ob).blocks
-        alvo = next(i for i, b in enumerate(blocos) if b.msg_id == a.saltar_msg) - 2
-        velho = bytes.fromhex("100000002c01f4010000000000000000")          # 1º fade da cena, com o mesmo tamanho do salto
+        alvo = a.saltar_bloco or next(i for i, b in enumerate(blocos) if b.msg_id == a.saltar_msg) - 2
+        velho = blocos[14].raw if a.saltar_bloco else bytes.fromhex("100000002c01f4010000000000000000")          # 1º fade da cena, com o mesmo tamanho do salto
+        if len(velho) != 16:
+            raise SystemExit("o bloco substituído não tem o tamanho do salto")
         novo = struct.pack("<IHI", 16, 702, alvo).ljust(16, b"\0")
         if ob.count(velho) < 1:
             raise SystemExit("bloco de fade não encontrado")
@@ -113,7 +116,7 @@ def main():
     res = gpda.build_gpda([(e.name, script if e is rd.script_entry else rd.data[e.data_offset:e.data_offset + e.data_size])
                            for e in rd.top])
     chk = osc.ResDat(res)
-    assert a.saltar_msg or chk.obj(ALVO) == rd.obj(cena)
+    assert a.saltar_msg or a.saltar_bloco or chk.obj(ALVO) == rd.obj(cena)
     txt = seekmap_por_caminho(res, seekmap.extract_text(first), {f"/{ALVO}/": f"/{cena}/", nome_obj: f"000script{cena}.obj.gz"})
     first_novo = seekmap.rebuild_first_dat(first, txt)
     arqs = {"/PSP_GAME/INSDIR/RES.DAT": res, "/PSP_GAME/USRDIR/first.dat": first_novo}
