@@ -1,0 +1,22 @@
+name: Publicar versão
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Criar a Release a partir de .github/notas
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSAO: ${{ github.ref_name }}
+        run: |
+          gh release create "$VERSAO" --verify-tag --prerelease \
+            --title "$(cat ".github/notas/$VERSAO.titulo")" \
+            --notes-file ".github/notas/$VERSAO.md"

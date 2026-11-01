@@ -1,0 +1,26 @@
+name: Publicar site
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-site
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Enviar site/ para a branch gh-pages
+        run: |
+          SHA=$(git subtree split --prefix site HEAD)
+          git push origin "$SHA:refs/heads/gh-pages"
