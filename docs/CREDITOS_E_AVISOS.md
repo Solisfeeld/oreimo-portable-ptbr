@@ -15,16 +15,7 @@ tela, e não aponta para cópias não autorizadas. Se você é titular de direit
 
 ## Licença
 
-**Nenhuma licença foi escolhida até agora.** Sem licença, o código segue com todos os direitos reservados ao autor; o GitHub apenas
-permite ver e fazer fork pela plataforma. Essa decisão será registrada aqui quando for tomada.
-
-| componente | situação |
-|---|---|
-| Ferramentas, testes e documentação deste repositório | escritos para este projeto; licença a definir |
-| `referencia/` | código de trabalho deste projeto, só para estudo; licença a definir |
-| Módulos de terceiros usados no projeto | **não incluídos** (ver abaixo) |
-| Tradução, imagens traduzidas e demais recursos derivados do jogo | **não incluídos**; dependem de avaliação de direitos |
-| Conteúdo do jogo | dos titulares; não incluído |
+O código próprio usa MIT e a documentação própria usa CC BY 4.0, com exceções. O jogo, a tradução e `referencia/` ficam fora dessas licenças. A lista completa está em [LICENCAS.md](LICENCAS.md).
 
 ### Componentes não incluídos
 
