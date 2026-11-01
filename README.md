@@ -70,7 +70,7 @@ Plataforma: PSP · Emulador: PPSSPP · Textos: Português brasileiro · Áudio: 
 <details>
 <summary><strong>Já posso jogar em português?</strong></summary>
 <br>
-Sim. [Baixe a ISO do Disco 1](https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso) e abra no PPSSPP.
+Sim. <a href="https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso">Baixe a ISO do Disco 1</a> e abra no PPSSPP.
 </details>
 
 <details>
