@@ -8,10 +8,9 @@ Na árvore completa do projeto, as fontes públicas ficam em `ferramentas/public
 
 Em `site/index.html`:
 
-1. Na seção `id="progresso"`, procure `data-disco="2"`.
-2. Troque o selo: `selo-off` (indisponível), `selo-prep` (em andamento) ou `selo-ok` (concluído).
-3. Atualize o texto ao lado. Use só dados reais.
-4. Repita na seção `id="downloads"`, no cartão do disco, e nos selos da abertura.
+1. Nos selos da abertura, troque a classe do disco: `selo-off` (indisponível), `selo-prep` (em andamento) ou `selo-ok` (concluído).
+2. Na seção `id="downloads"`, atualize o título do cartão do disco. Use só dados reais.
+3. Repita no `README.md`.
 
 ## Publicar um download
 
@@ -20,8 +19,8 @@ O Disco 1 já tem uma ISO hospedada externamente; não há patch independente. O
 Para atualizar um download:
 
 1. Confirme que o arquivo está acessível publicamente e que nome, tamanho e metadados correspondem ao arquivo aprovado.
-2. Mantenha os botões da abertura e da seção `id="downloads"` como links HTML normais para a URL direta do arquivo. Não dependa de `download` entre domínios nem de JavaScript para iniciar o download.
-3. Atualize o aviso `aviso-principal`, os selos, a seção `id="instalacao"`, as perguntas frequentes e o `README.md` com o mesmo endereço e estado.
+2. Mantenha o botão da seção `id="downloads"` como link HTML normais para a URL direta do arquivo. Não dependa de `download` entre domínios nem de JavaScript para iniciar o download.
+3. Atualize os selos, a seção `id="instalacao"`, as perguntas frequentes e o `README.md` com o mesmo endereço e estado.
 4. Verifique o layout em computador e celular e acompanhe o workflow e o site público depois do push.
 
 Endereço atual do Disco 1: `https://archive.org/download/oreimo-portable-ga-tsuzuku-ptbr/Oreimo_Disco1_PTBR.iso`.
