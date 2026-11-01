@@ -1,0 +1,51 @@
+# Conteúdo do jogo: nunca versionar
+*.iso
+*.cso
+*.pbp
+*.bin
+*.dat
+*.prx
+*.pgf
+*.awb
+*.hca
+*.pmf
+*.gim
+*.elf
+*.sfo
+*.xdelta
+*.ppf
+
+# Imagens, fontes e pacotes: este repositório não traz nenhum
+*.png
+*.jpg
+*.jpeg
+*.ttf
+*.otf
+*.zip
+*.7z
+*.rar
+*.gz
+
+# Textos e dados de tradução
+*.csv
+*.tsv
+
+# Áreas de trabalho locais
+build/
+entrega/
+traducao/
+oreimo_core/
+fontes/
+referencias/
+capturas/
+pngs/
+*.wav
+*.avi
+*.pdb
+
+# Python e editores
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
