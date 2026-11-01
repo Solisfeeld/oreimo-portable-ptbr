@@ -128,6 +128,11 @@ p { margin: 0 0 1em; }
 .lista-marcada { padding-left: 1.2em; margin: 0 0 1em; }
 .lista-marcada li { margin-bottom: .4em; }
 
+.galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.galeria figure { margin: 0; }
+.galeria img { width: 100%; border-radius: 10px; box-shadow: 0 10px 24px rgba(0, 0, 0, .35); }
+.galeria figcaption { margin-top: 8px; font-size: .92rem; font-weight: 700; color: #e7dcea; }
+
 /* Discos */
 .discos { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .disco { display: grid; grid-template-columns: 150px 1fr; gap: 22px; align-items: center; background: var(--tinta-3); border-radius: var(--raio); padding: 24px; }
@@ -209,13 +214,13 @@ details p { margin: 0; padding: 0 20px 18px; color: var(--texto-suave); }
   .abertura-grade { padding-top: 44px; padding-bottom: 52px; gap: 36px; }
   .capa-caixa { width: min(320px, 86%); }
   .capa-caixa img { transform: none; }
-  .cartoes, .pacotes, .passos { grid-template-columns: 1fr 1fr; }
+  .cartoes, .pacotes, .passos, .galeria { grid-template-columns: 1fr 1fr; }
   .numeros ul { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
   .secao { padding: 52px 0; }
-  .cartoes, .pacotes, .passos, .precisa { grid-template-columns: 1fr; }
+  .cartoes, .pacotes, .passos, .precisa, .galeria { grid-template-columns: 1fr; }
   .disco { grid-template-columns: 96px 1fr; gap: 16px; padding: 18px; }
   .acoes .botao { flex: 1 1 100%; }
   .ficha div { grid-template-columns: 1fr; gap: 0; }
