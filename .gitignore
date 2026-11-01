@@ -54,3 +54,4 @@ __pycache__/
 # Capturas revisadas à mão para o site
 !site/assets/capturas/
 !site/assets/capturas/*.jpg
+!site/assets/capa-oficial.jpg
